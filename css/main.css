@@ -4,6 +4,7 @@ a
 	text-decoration: none;
 	font-family: Helvetica Neue, Helvetica, Arial;
 	}
+
 a:hover	
 	{
 	color: #444;
@@ -17,14 +18,56 @@ body
 	margin: 0 0 0 0 
 	}
 
-#header
+.content
 	{
-	position: sticky;
-	top: 0;
+/*
 	background-color: white;
-	margin: 0;
-	height: 100px;
-	background-color: #EEEEEE;
+*/
+	max-width: 40em;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1em;
+	padding-right: 1em;
+	font-size: 150%;
+	}
+
+.dropdown-container
+	{
+	position: relative;
+	display: inline-block;
+	}
+
+.dropdown-content 
+	{
+  	display: none;
+  	position: absolute;
+  	background-color: #232f3e;
+  	min-width: 20em;
+  	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  	z-index: 1;
+	color: #eaebed;
+	}
+
+.dropdown-content a 
+	{
+	text-align: left;
+  	color: black;
+  	padding: 2px 4px;
+  	text-decoration: none;
+  	display: block;
+	color: #eaebed;
+	}
+
+.dropdown-show 
+	{
+	display:block;
+	}
+
+
+.header 
+	{
+  	padding: 10px 16px;
+  	background-color: #232f3e;
 	}
 
 #headerimage
@@ -45,30 +88,13 @@ h1
 h2
 	{
 	font-family: Helvetica Neue, Helvetica, Arial;
-	font-size: 150%;
+	font-size: 180%;
 	margin-bottom: 0;
 	}
 
-#topnavwrapper
-	{
-	display: none;
-	}
-
-#leftnavwrapper
-	{
-	margin: 1em;
-	border-radius: 1em;
-	}
-
 nav 	{
-	border-radius: 1em;
-  	-webkit-flex: 1;
-  	-ms-flex: 1;
-  	flex: 1;
-  	padding: 0px;
-  	width: 8em;
-  	position: fixed;
-	background-color: #EEEEEE;
+	text-align: center;
+	font-size: 150%;
 	}
 
 nav li
@@ -76,36 +102,45 @@ nav li
 	list-style-type: none;
 	}
 
-#content
+nav a
 	{
-	background-color: white;
-	max-width: 60em;
-	margin-left: 10em;
+	color: #eaebed;
 	}
 
+nav a:hover
+	{
+	color: red;
+	}
 
+.sticky {
+  	position: fixed;
+  	top: 0;
+  	width: 100%;
+	padding: 0;
+	}
+
+.sticky + .content 
+	{
+  	padding-top: 102px;
+	}
+
+.top-container 
+	{
+	background-color: #131921;
+  	/*background-color: #EEEEEE;*/
+  	/*padding: 30px;*/
+  	text-align: center;
+	}
+
+/*
 @media only screen and (max-width : 40em) 
  	{
-	#leftnavwrapper
-		{
-		display: none;
-		margin: 1em;
-		border-radius: 1em;
-		}
-
-	#topnavwrapper
-		{
-		display: block;
-		margin: 1em;
-		border-radius: 1em;
-		font-size: 130%;
-		}
-
 	#content
 		{
 		background-color: white;
 		margin-left: 1em;
 		}
 	}
+*/
 
 

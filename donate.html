@@ -5,22 +5,31 @@
         <title>Herts 4x4 Response</title>
         <link rel="shortcut icon" href="https://herts4x4response.github.io/img/favicon.ico">
         <meta name="author" content="Kevin Boone">
-        <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+        <meta name="viewport" content="width=device-width; initial-scale=1;">
         <link rel="stylesheet" href="css/main.css">
 </head>
 
 
 <body>
 
-<header id="header">
+<div class="top-container">
 <img id="headerimage" 
 	src="img/banner.png" height="128px" alt="Red and yellow checkerboard logo"/>
-</header>
+</div>
 
-<div id="topnavwrapper">
+<div class="header" id="myHeader">
+<nav>
 <a href="index.html">Home</a>
 &nbsp;
-<a href="about.html">About us</a>
+<div class="dropdown-container">
+<a class="dropbtn" onclick="javascript:onClickAbout()">About us</a>
+<div id="dropdownAbout" class="dropdown-content">
+<a href="about.html">About Herts 4x4 Response</a>
+<a href="where_we_cover.html">Where we cover</a>
+<a href="who_we_support.html">Who we support</a>
+<a href="about_4x4_response_uk.html">About 4x4 Response UK</a>
+</div>
+</div>
 &nbsp;
 <a href="joinus.html">Join us</a>
 &nbsp;
@@ -32,25 +41,11 @@
 &nbsp;
 <a href="donate.html">Donate</a>
 &nbsp;
-<a href="client_enquiry.html">Client enquiry</a>
-</div>
-
-<div id="leftnavwrapper">
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About us</a></li>
-<li><a href="joinus.html">Join us</a></li>
-<li><a href="faq.html">FAQs</a></li>
-<li><a href="gallery/index.html">Gallery</a></li>
-<li><a href="members.html">Members</a></li>
-<li><a href="donate.html">Donate</a></li>
-<li><a href="client_enquiry.html">Client enquiry</a></li>
-</ul>
+<a href="client_enquiry.html">Client&nbsp;enquiry</a>
 </nav>
 </div>
 
-<section id="content">
+<div class="content">
 
 
 
@@ -62,7 +57,40 @@ TBD: I haven't been given any information to put here so far.
 </i>
 </p>
 
-</section>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+function onClickAbout() {
+  document.getElementById("dropdownAbout").classList.toggle("dropdown-show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('dropdown-show')) {
+        openDropdown.classList.remove('dropdown-show');
+      }
+    }
+  }
+} 
+
+</script>
 
 </body>
 </html>
