@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+        <title>Herts 4x4 Response</title>
+        <link rel="shortcut icon" href="https://herts4x4response.github.io/img/favicon.ico">
+        <meta name="author" content="Kevin Boone">
+        <meta name="viewport" content="width=device-width; initial-scale=1;">
+        <link rel="stylesheet" href="css/main.css">
+</head>
+
+
+<body>
+
+<div class="top-container">
+<img id="headerimage" 
+	src="img/banner.png" height="128px" alt="Red and yellow checkerboard logo"/>
+</div>
+
+<div class="header" id="myHeader">
+<nav>
+<a href="index.html">Home</a>
+&nbsp;
+<div class="dropdown-container">
+<a class="dropbtn" onclick="javascript:onClickAbout()">About us</a>
+<div id="dropdownAbout" class="dropdown-content">
+<a href="about.html">About Herts 4x4 Response</a>
+<a href="about_4x4_response_uk.html">About 4x4 Response UK</a>
+<a href="where_we_cover.html">Regional coverage map</a>
+<a href="who_we_support.html">Clients we support</a>
+</div>
+</div>
+&nbsp;
+<div class="dropdown-container">
+<a class="dropbtn" onclick="javascript:onClickVolunteerEnquiry()">Volunteer Enquiry</a>
+<div id="dropdownVolunteerEnquiry" class="dropdown-content">
+<a href="training.html">Training</a>
+<a href="volunteer_responder_benefits.html">Volunteer Responder Benefits</a>
+<a href="what_4x4_response_wants_from_you.html">What 4x4 Response wants from you</a>
+<a href="faq.html">FAQs</a>
+<a href="additional_information_for_response_volunteers.html">Additional Information for Response Volunteers</a>
+<a href="contact_membership.html">Contact Us</a>
+</div>
+</div>
+
+&nbsp;
+<div class="dropdown-container">
+<a class="dropbtn" onclick="javascript:onClickClientEnquiry()">Client Enquiry</a>
+<div id="dropdownClientEnquiry" class="dropdown-content">
+<a href="client_enquiry.html">Information for Cat 1 &amp; 2 Responders and the Voluntary &amp; Commercial Sector</a>
+<a href="where_we_cover.html">Regional coverage map</a>
+<a href="who_we_support.html">Clients we support</a>
+<a href="contact_client.html">Contact Us</a>
+</div>
+</div>
+
+
+&nbsp;
+<a href="gallery/index.html">Gallery</a>
+</nav>
+</div>
+
+<div class="content">
+
+
+
+<h1>Client enquiry contact</h1>
+
+
+<p>
+<i>TBD: Some kind of contact form will go here. 
+Implementation and costs implications to be discussed with client</i> 
+<p>
+
+
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+function onClickAbout() {
+  document.getElementById("dropdownAbout").classList.toggle("dropdown-show");
+}
+
+function onClickVolunteerEnquiry() {
+  document.getElementById("dropdownVolunteerEnquiry").classList.toggle("dropdown-show");
+}
+
+function onClickClientEnquiry() {
+  document.getElementById("dropdownClientEnquiry").classList.toggle("dropdown-show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('dropdown-show')) {
+        openDropdown.classList.remove('dropdown-show');
+      }
+    }
+  }
+} 
+
+</script>
+
+</body>
+</html>
+
+

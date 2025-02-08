@@ -25,23 +25,38 @@
 <a class="dropbtn" onclick="javascript:onClickAbout()">About us</a>
 <div id="dropdownAbout" class="dropdown-content">
 <a href="about.html">About Herts 4x4 Response</a>
-<a href="where_we_cover.html">Where we cover</a>
-<a href="who_we_support.html">Who we support</a>
 <a href="about_4x4_response_uk.html">About 4x4 Response UK</a>
+<a href="where_we_cover.html">Regional coverage map</a>
+<a href="who_we_support.html">Clients we support</a>
 </div>
 </div>
 &nbsp;
-<a href="joinus.html">Join us</a>
-&nbsp;
+<div class="dropdown-container">
+<a class="dropbtn" onclick="javascript:onClickVolunteerEnquiry()">Volunteer Enquiry</a>
+<div id="dropdownVolunteerEnquiry" class="dropdown-content">
+<a href="training.html">Training</a>
+<a href="volunteer_responder_benefits.html">Volunteer Responder Benefits</a>
+<a href="what_4x4_response_wants_from_you.html">What 4x4 Response wants from you</a>
 <a href="faq.html">FAQs</a>
+<a href="additional_information_for_response_volunteers.html">Additional Information for Response Volunteers</a>
+<a href="contact_membership.html">Contact Us</a>
+</div>
+</div>
+
+&nbsp;
+<div class="dropdown-container">
+<a class="dropbtn" onclick="javascript:onClickClientEnquiry()">Client Enquiry</a>
+<div id="dropdownClientEnquiry" class="dropdown-content">
+<a href="client_enquiry.html">Information for Cat 1 &amp; 2 Responders and the Voluntary &amp; Commercial Sector</a>
+<a href="where_we_cover.html">Regional coverage map</a>
+<a href="who_we_support.html">Clients we support</a>
+<a href="contact_client.html">Contact Us</a>
+</div>
+</div>
+
+
 &nbsp;
 <a href="gallery/index.html">Gallery</a>
-&nbsp;
-<a href="members.html">Members</a>
-&nbsp;
-<a href="donate.html">Donate</a>
-&nbsp;
-<a href="client_enquiry.html">Client&nbsp;enquiry</a>
 </nav>
 </div>
 
@@ -75,6 +90,14 @@ function myFunction() {
 
 function onClickAbout() {
   document.getElementById("dropdownAbout").classList.toggle("dropdown-show");
+}
+
+function onClickVolunteerEnquiry() {
+  document.getElementById("dropdownVolunteerEnquiry").classList.toggle("dropdown-show");
+}
+
+function onClickClientEnquiry() {
+  document.getElementById("dropdownClientEnquiry").classList.toggle("dropdown-show");
 }
 
 window.onclick = function(event) {

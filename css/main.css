@@ -88,9 +88,20 @@ h1
 h2
 	{
 	font-family: Helvetica Neue, Helvetica, Arial;
-	font-size: 180%;
+	font-size: 150%;
 	margin-bottom: 0;
 	}
+
+.member_benefits
+	{
+	list-style-type: none;
+	}
+
+.member_benefits li
+	{
+	padding-bottom: 1em;
+	}
+
 
 nav 	{
 	text-align: center;
