@@ -24,19 +24,19 @@
 <div class="dropdown-container">
 <a class="dropbtn" onclick="javascript:onClickAbout()">About&nbsp;us&#x25BC</a>
 <div id="dropdownAbout" class="dropdown-content">
-<a href="about.html">About Herts 4x4 Response</a>
+<a href="about.html">About&nbsp;Herts&nbsp;4x4&nbsp;Response</a>
 <a href="about_4x4_response_uk.html">About 4x4 Response UK</a>
-<a href="where_we_cover.html">Regional coverage map</a>
-<a href="who_we_support.html">Clients we support</a>
+<a href="where_we_cover.html">Coverage</a>
+<a href="who_we_support_volunteers.html">Clients we support</a>
 </div>
 </div>
 &nbsp;
 <div class="dropdown-container">
 <a class="dropbtn" onclick="javascript:onClickVolunteerEnquiry()">Volunteer&nbsp;Enquiry&#x25BC</a>
 <div id="dropdownVolunteerEnquiry" class="dropdown-content">
-<a href="training.html">Training</a>
-<a href="volunteer_responder_benefits.html">Volunteer Responder Benefits</a>
+<a href="volunteer_responder_benefits.html">Volunteer&nbsp;Responder&nbsp;Benefits</a>
 <a href="what_4x4_response_wants_from_you.html">What 4x4 Response wants from you</a>
+<a href="training.html">Training</a>
 <a href="faq.html">FAQs</a>
 <a href="additional_information_for_response_volunteers.html">Additional Information</a>
 <a href="contact_membership.html">Contact Us</a>
@@ -47,9 +47,9 @@
 <div class="dropdown-container">
 <a class="dropbtn" onclick="javascript:onClickClientEnquiry()">Client&nbsp;Enquiry&#x25BC</a>
 <div id="dropdownClientEnquiry" class="dropdown-content">
-<a href="client_enquiry.html">Client services</a>
-<a href="where_we_cover.html">Regional coverage map</a>
-<a href="who_we_support.html">Clients we support</a>
+<a href="client_enquiry.html">Client&nbsp;services</a>
+<a href="where_we_cover.html">Coverage</a>
+<a href="who_we_support_clients.html">Clients we support</a>
 <a href="contact_client.html">Contact Us</a>
 </div>
 </div>
@@ -65,18 +65,12 @@
 
 
 <h1>Are you...</h1>
-
 <p>
-...in becoming a volunteer responder with Herts 4x4 Response Group?
+...interested in becoming a volunteer responder with Herts 4x4 Response Group?
 </p>
+<img src="img/are_you_photo_r.jpg" class="home-banner-photo-right"/>
+<img src="img/are_you_photo_l.jpg" class="home-banner-photo-left"/>
 
-<p align="center">
-<b>Membership enquiry</b>
-</p>
-
-<p>
-<i>TBD: Implementation and costs implications to be discussed with client</i> 
-<p>
 
 <p>
 For more information, please contact
@@ -85,16 +79,19 @@ complete the application form (<a href="docs/membership_application.docx">Micros
 or <a href="docs/membership_application.pdf">PDF format</a>).
 </p>
 
+<br clear="all"/>
+<a href="https://www.facebook.com/p/Herts-4x4-Response-100069714675238/" target="_blank"><img src="img/fb.png" width="64px"/></a>
 
+<a href="https://www.instagram.com/herts_4x4_response/" target="_blank"><img src="img/ig.png" width="64px"/></a>
 </div>
 
 <script>
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {toggleSticky()};
 
 var header = document.getElementById("myHeader");
 var sticky = header.offsetTop;
 
-function myFunction() {
+function toggleSticky() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
   } else {
@@ -102,28 +99,35 @@ function myFunction() {
   }
 }
 
+function closeAllMenus() {
+  var dropdowns = document.getElementsByClassName ("dropdown-content");
+  var i;
+  for (i = 0; i < dropdowns.length; i++) {
+    var openDropdown = dropdowns[i];
+    if (openDropdown.classList.contains ('dropdown-show')) {
+      openDropdown.classList.remove ('dropdown-show');
+    }
+  }
+}
+
 function onClickAbout() {
+  closeAllMenus();
   document.getElementById("dropdownAbout").classList.toggle("dropdown-show");
 }
 
 function onClickVolunteerEnquiry() {
+  closeAllMenus();
   document.getElementById("dropdownVolunteerEnquiry").classList.toggle("dropdown-show");
 }
 
 function onClickClientEnquiry() {
+  closeAllMenus();
   document.getElementById("dropdownClientEnquiry").classList.toggle("dropdown-show");
 }
 
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('dropdown-show')) {
-        openDropdown.classList.remove('dropdown-show');
-      }
-    }
+	closeAllMenus();
   }
 } 
 
