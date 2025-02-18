@@ -8,7 +8,7 @@ a
 a:hover	
 	{
 	color: #444;
-	text-decoration: none;
+	/*text-decoration: none;*/
 	font-family: Helvetica Neue, Helvetica, Arial;
 	}
 
@@ -56,7 +56,7 @@ body
   	color: black;
   	padding: 2px 4px;
 	padding-bottom: 8px;
-  	text-decoration: none;
+  	/*text-decoration: none;*/
   	display: block;
 	color: #eaebed;
 	}
@@ -93,6 +93,11 @@ h2
 	font-family: Helvetica Neue, Helvetica, Arial;
 	font-size: 150%;
 	margin-bottom: 0;
+	}
+
+.highlighted-menu
+	{
+	text-decoration-line: underline;
 	}
 
 .home-banner-photo-left

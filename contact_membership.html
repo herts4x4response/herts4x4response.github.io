@@ -10,7 +10,7 @@
 </head>
 
 
-<body>
+<body onload="afterLoaded()">
 
 <div class="top-container">
 <img id="headerimage" 
@@ -19,29 +19,19 @@
 
 <div class="header" id="myHeader">
 <nav>
-<a href="index.html">Home</a>
-&nbsp;
-<!--
-<div class="dropdown-container">
-<a class="dropbtn" onclick="javascript:onClickAbout()">About&nbsp;us&#x25BC;</a>
-<div id="dropdownAbout" class="dropdown-content">
-<a href="about_4x4_response_uk.html">About 4x4 Response UK</a>
-<a href="where_we_cover.html">Herts Coverage</a>
-</div>
-</div>
--->
+<a class="menu-href" href="index.html">Home</a>
 &nbsp;
 <div class="dropdown-container">
 <a class="dropbtn" onclick="javascript:onClickVolunteerEnquiry()">Volunteer&nbsp;Enquiry&#x25BC;</a>
 <div id="dropdownVolunteerEnquiry" class="dropdown-content">
-<a href="about.html">About&nbsp;Herts 4x4&nbsp;Response</a>
-<a href="volunteer_responder_benefits.html">Volunteer Responder&nbsp;Benefits</a>
-<a href="what_4x4_response_wants_from_you.html">What 4x4 Response Wants From You</a>
-<a href="training.html">Training</a>
-<a href="who_we_support_volunteers.html">Clients we support</a>
-<a href="faq.html">FAQs</a>
-<a href="additional_information_for_response_volunteers.html">Insurance info</a>
-<a href="contact_membership.html">Contact Us</a>
+<a class="menu-href" href="about.html">About&nbsp;Herts 4x4&nbsp;Response</a>
+<a class="menu-href" href="volunteer_responder_benefits.html">Volunteer Responder&nbsp;Benefits</a>
+<a class="menu-href" href="what_4x4_response_wants_from_you.html">What 4x4 Response Wants From You</a>
+<a class="menu-href" href="training.html">Training</a>
+<a class="menu-href" href="who_we_support_volunteers.html">Clients we support</a>
+<a class="menu-href" href="faq.html">FAQs</a>
+<a class="menu-href" href="additional_information_for_response_volunteers.html">Insurance info</a>
+<a class="menu-href" href="contact_membership.html">Contact Us</a>
 </div>
 </div>
 
@@ -49,15 +39,15 @@
 <div class="dropdown-container">
 <a class="dropbtn" onclick="javascript:onClickClientEnquiry()">Client&nbsp;Enquiry&#x25BC;</a>
 <div id="dropdownClientEnquiry" class="dropdown-content">
-<a href="client_enquiry.html">C1, C2, Voluntary Services</a>
-<a href="where_we_cover.html">Herts Coverage</a>
-<a href="who_we_support_clients.html">Clients We Support</a>
-<a href="contact_client.html">Contact Us</a>
+<a class="menu-href" href="client_enquiry.html">C1, C2, Voluntary Services</a>
+<a class="menu-href" href="where_we_cover.html">Herts Coverage</a>
+<a class="menu-href" href="who_we_support_clients.html">Clients We Support</a>
+<a class="menu-href" href="contact_client.html">Contact Us</a>
 </div>
 </div>
 
 &nbsp;
-<a href="gallery/index.html">Gallery</a>
+<a class="menu-href-nohighlight" href="gallery/index.html">Gallery</a>
 </nav>
 </div>
 
@@ -73,6 +63,7 @@
 <img src="img/are_you_photo_l.jpg" class="home-banner-photo-left"/>
 
 
+<br clear="all"/>
 <p>
 Simply send us your name and enquiry via the email address and we'll get in touch.
 </p>
@@ -89,6 +80,29 @@ Simply send us your name and enquiry via the email address and we'll get in touc
 </div>
 
 <script>
+
+function highlightMenu() {
+  var path = window.location.pathname;
+  var page = path.split("/").pop();
+  var hrefs = document.getElementsByClassName ("menu-href");
+  var i;
+  for (i = 0; i < hrefs.length; i++) {
+    var href = hrefs[i];
+    var hrefS = hrefs[i].toString();
+    var menuPage = hrefS.split("/").pop();
+    if (menuPage == page) {
+       href.classList.add ("highlighted-menu");
+    }
+    else {
+       href.classList.remove ("highlighted-menu");
+    }
+  }
+}
+
+function afterLoaded() {
+  highlightMenu();
+}
+
 window.onscroll = function() {toggleSticky()};
 
 var header = document.getElementById("myHeader");
@@ -138,5 +152,4 @@ window.onclick = function(event) {
 
 </body>
 </html>
-
 

@@ -16,3 +16,6 @@
 2025-02-12T18:45:38.066Z thumbsup:warn magick (https://imagemagick.org) is not installed. You will not be able to process HEIC images.
 2025-02-12T18:45:38.066Z thumbsup:warn gifsicle (http://www.lcdf.org/gifsicle) is not installed. You will not be able to process animated GIFs.
 2025-02-12T18:45:38.066Z thumbsup:warn dcraw (https://www.cybercom.net/~dcoffin/dcraw/) is not installed. You will not be able to process RAW photos.
+2025-02-18T09:56:44.323Z thumbsup:warn magick (https://imagemagick.org) is not installed. You will not be able to process HEIC images.
+2025-02-18T09:56:44.324Z thumbsup:warn gifsicle (http://www.lcdf.org/gifsicle) is not installed. You will not be able to process animated GIFs.
+2025-02-18T09:56:44.324Z thumbsup:warn dcraw (https://www.cybercom.net/~dcoffin/dcraw/) is not installed. You will not be able to process RAW photos.
