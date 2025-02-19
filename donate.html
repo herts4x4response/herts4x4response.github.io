@@ -7,6 +7,7 @@
         <link rel="shortcut icon" href="https://herts4x4response.github.io/img/favicon.ico"/>
         <meta name="viewport" content="width=device-width; initial-scale=1;"/>
         <link rel="stylesheet" href="css/main.css"/>
+	<script type="text/javascript" src="scripts/main.js"></script>
 </head>
 
 
@@ -25,7 +26,7 @@
 <a class="dropbtn" onclick="javascript:onClickVolunteerEnquiry()">Volunteer&nbsp;Enquiry&#x25BC;</a>
 <div id="dropdownVolunteerEnquiry" class="dropdown-content">
 <a class="menu-href" href="about.html">About&nbsp;Herts 4x4&nbsp;Response</a>
-<a class="menu-href" href="volunteer_responder_benefits.html">Volunteer Responder&nbsp;Benefits</a>
+<a class="menu-href" href="volunteer_responder_benefits.html">Volunteer Responder Benefits</a>
 <a class="menu-href" href="what_4x4_response_wants_from_you.html">What 4x4 Response Wants From You</a>
 <a class="menu-href" href="training.html">Training</a>
 <a class="menu-href" href="who_we_support_volunteers.html">Clients we support</a>
@@ -64,77 +65,6 @@ TBD: I haven't been given any information to put here so far.
 </p>
 
 </div>
-
-<script>
-
-function highlightMenu() {
-  var path = window.location.pathname;
-  var page = path.split("/").pop();
-  var hrefs = document.getElementsByClassName ("menu-href");
-  var i;
-  for (i = 0; i < hrefs.length; i++) {
-    var href = hrefs[i];
-    var hrefS = hrefs[i].toString();
-    var menuPage = hrefS.split("/").pop();
-    if (menuPage == page) {
-       href.classList.add ("highlighted-menu");
-    }
-    else {
-       href.classList.remove ("highlighted-menu");
-    }
-  }
-}
-
-function afterLoaded() {
-  highlightMenu();
-}
-
-window.onscroll = function() {toggleSticky()};
-
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
-
-function toggleSticky() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
-
-function closeAllMenus() {
-  var dropdowns = document.getElementsByClassName ("dropdown-content");
-  var i;
-  for (i = 0; i < dropdowns.length; i++) {
-    var openDropdown = dropdowns[i];
-    if (openDropdown.classList.contains ('dropdown-show')) {
-      openDropdown.classList.remove ('dropdown-show');
-    }
-  }
-}
-
-function onClickAbout() {
-  closeAllMenus();
-  document.getElementById("dropdownAbout").classList.toggle("dropdown-show");
-}
-
-function onClickVolunteerEnquiry() {
-  closeAllMenus();
-  document.getElementById("dropdownVolunteerEnquiry").classList.toggle("dropdown-show");
-}
-
-function onClickClientEnquiry() {
-  closeAllMenus();
-  document.getElementById("dropdownClientEnquiry").classList.toggle("dropdown-show");
-}
-
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-	closeAllMenus();
-  }
-} 
-
-</script>
 
 </body>
 </html>
